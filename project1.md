@@ -97,7 +97,7 @@ Cấu hình để Apache nhận cấu hình những virtual host trong sites-ena
 
 Thêm dòng sau vào cuối file, sau đó lưu lại và thoát
 
-`  IncludeOptional sites-enabled/*.conf `
+` IncludeOptional sites-enabled/*.conf `
 
 
 Tạo File Virtual host cho web1.com
@@ -120,12 +120,13 @@ Tương tự các bước như trên, ta tạo File Virtual host cho web2.com, t
 
 Kích hoạt Virtual host
 
-Apache sẽ chỉ nhận những cấu hình Virtual host trong thư mục sites-enabled. vì vậy ta sẽ tạo một liên kết ( symbolic link) vào thư mục sites-enabled 
+Apache sẽ chỉ nhận những cấu hình Virtual host trong thư mục sites-enabled. vì vậy ta sẽ tạo một liên kết (symbolic link) vào thư mục sites-enabled 
 
 ` # ln -s /etc/httpd/sites-available/web1.conf /etc/httpd/sites-enabled/web1.conf `
 ` # ln -s /etc/httpd/sites-available/web2.conf /etc/httpd/sites-enabled/web2.conf `
 
 Trỏ ip trong file hosts của windows để có thể phân dải 2 tên miền web1.com và web2.com về ip của Web server bằng cách vào Notepad với quyền admin, mở file host trong C:\Windows\System32\drivers\etc 
+
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/fih2550xmt_Screenshot%202021-10-05%20171917.png)
 
 Disable SELINUX bằng cách đổi trạng thái SELINUX=disabled trong /etc/selinux/config
@@ -179,6 +180,7 @@ define('DB_PASSWORD', 'password');
 > Thực hiện tương tự để cài đặt wordpress cho web2. Sau đó khởi động lại dịch vụ httpd bằng câu lệnh *# systemctl restart httpd*
 
 **Truy cập web1.com và web2.com để xem kết quả cài đặt Wordpress**
+
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/e88guhqb92_Screenshot%202021-10-05%20231907.png)
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/wpxjy8v4ir_Screenshot%202021-10-05%20232308.png)
