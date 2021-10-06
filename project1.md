@@ -51,15 +51,15 @@ Set password cho user root để đăng nhập
 - **Cài đặt PHP**
 
 Cài đặt thêm 2 repo REMI và EPEL
-
-`# yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm`
-`# yum -y install epel-release yum-utils`
-
+```
+# yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+# yum -y install epel-release yum-utils
+```
 Cài đặt PHP 7.3 và các gói bổ sung 
-
-`# yum-config-manager --enable remi-php73`
-`# yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json`
-
+```
+# yum-config-manager --enable remi-php73
+# yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json`
+```
 Kiểm tra phiên bản PHP vừa cài đặt
 
 `# php -v`
