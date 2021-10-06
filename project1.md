@@ -18,11 +18,10 @@ Project này sử dụng CentOS 7
 `# yum -y install httpd`
 
  Khởi động Apache
-
-`# systemctl enable httpd`
-
-`# systemctl start httpd`
-
+```
+# systemctl enable httpd
+# systemctl start httpd
+```
 Cấu hình firewall mở port cho dịch vụ http/https
 
 ```
@@ -39,11 +38,10 @@ Cài đặt MariaDB
 `# yum -y install mariadb-server mariadb`
 
 Khởi động MariaDB
-
-`# systemctl enable mariadb`
-
-`# systemctl start mariadb`
-
+```
+# systemctl enable mariadb
+# systemctl start mariadb
+```
 Set password cho user root để đăng nhập
 
 `# mysql_secure_installation`
@@ -69,10 +67,10 @@ Kiểm tra phiên bản PHP vừa cài đặt
 Trên server sẽ cấu hình chạy 2 website là web1.com và web2.com
 
 Tạo Folder cho 2 website web1 và web2
-
-`# mkdir /var/www/web1`
-`# mkdir /var/www/web2`
-
+```
+# mkdir /var/www/web1
+# mkdir /var/www/web2
+```
 Chỉnh sửa quyền truy cập với các file và thư mục bên trong /var/www
 
 `# chmod -R 755 /var/www`
@@ -86,10 +84,10 @@ Tạo ra file index.html đơn giản cho 2 website
 # echo "<center><h1>This is website web2.com</h1></center>" > /var/www/web2/index.html
 ```
 Tạo 2 thư mục lưu trữ File cấu hình Virtual host cho Apache:
-
-` # mkdir /etc/httpd/sites-available `
-` # mkdir /etc/httpd/sites-enabled `
-
+```
+# mkdir /etc/httpd/sites-available 
+# mkdir /etc/httpd/sites-enabled 
+```
 Trong đó:
 sites-available chứa các cấu hình Virtual host có trên hệ thống
 sites-enabled chứa các cấu hình Virtual host được kích hoạt để chạy
@@ -124,10 +122,10 @@ Tương tự các bước như trên, ta tạo File Virtual host cho web2.com, t
 Kích hoạt Virtual host
 
 Apache sẽ chỉ nhận những cấu hình Virtual host trong thư mục sites-enabled. vì vậy ta sẽ tạo một liên kết (symbolic link) vào thư mục sites-enabled 
-
-` # ln -s /etc/httpd/sites-available/web1.conf /etc/httpd/sites-enabled/web1.conf `
-` # ln -s /etc/httpd/sites-available/web2.conf /etc/httpd/sites-enabled/web2.conf `
-
+```
+# ln -s /etc/httpd/sites-available/web1.conf /etc/httpd/sites-enabled/web1.conf 
+# ln -s /etc/httpd/sites-available/web2.conf /etc/httpd/sites-enabled/web2.conf 
+```
 Trỏ ip trong file hosts của windows để có thể phân dải 2 tên miền web1.com và web2.com về ip của Web server bằng cách vào Notepad với quyền admin, mở file host trong C:\Windows\System32\drivers\etc 
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/fih2550xmt_Screenshot%202021-10-05%20171917.png)
@@ -156,20 +154,20 @@ MariaDB [(none)]> grant all privileges on web1.* to userweb1@locahost;
 MariaDB [(none)]> flush privileges;
 ```
 - Download wordpress và giải nén ra 
- 
-` # yum -y install wget `
-` # wget http://wordpress.org/latest.tar.gz `
-` # tar -xzvf latest.tar.gz `
-
+``` 
+# yum -y install wget
+# wget http://wordpress.org/latest.tar.gz 
+# tar -xzvf latest.tar.gz 
+```
 - Cài đặt wordpress cho web1
-
-` # cp -r ~/wordpress/* /var/www/web1/ `
-` # mkdir /var/www/web1/wp-content/uploads `
-` # chown -R apache:apache /var/www/web1/* `
-` # cd /var/www/web1 `
-` # cp wp-config-sample.php wp-config.php `
-` # vi wp-config.php `
-
+```
+# cp -r ~/wordpress/* /var/www/web1/ 
+# mkdir /var/www/web1/wp-content/uploads 
+# chown -R apache:apache /var/www/web1/* 
+# cd /var/www/web1 
+# cp wp-config-sample.php wp-config.php 
+# vi wp-config.php 
+```
 Thay đổi trong file wp-config.php các thông tin về database như database name, database username, database Password. Sau đó lưu lại và thoát
 
 ```
@@ -271,15 +269,16 @@ Ta sẽ cài đặt Nginx Reverse proxy và Apache Web Server trên cùng một 
 Disable SELINUX bằng cách đổi trạng thái SELINUX=disabled trong /etc/selinux/config
 
 **Cài đặt và khởi động Apache Web Server**
-
-` # yum -y install httpd `
-` # systemctl enable httpd `
-` # systemctl start httpd `
-
-`# firewall-cmd --permanent --zone=public --add-port=80/tcp`
-`# firewall-cmd --permanent --zone=public --add-port=8080/tcp`
-`# firewall-cmd --reload`
-
+```
+# yum -y install httpd 
+# systemctl enable httpd 
+# systemctl start httpd 
+```
+```
+# firewall-cmd --permanent --zone=public --add-port=80/tcp
+# firewall-cmd --permanent --zone=public --add-port=8080/tcp
+# firewall-cmd --reload
+```
 **Cấu hình Apache listen ở port 8080 thay vì 80 như mặc định**
 
 ` # vi /etc/httpd/conf/httpd.conf `
@@ -291,12 +290,12 @@ Truy cập địa chỉ ip của server (http://ip-server:8080) để kiểm tra
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/y5xlw8jaca_Screenshot%202021-10-06%20120634.png)
 
 **Cài đặt và khởi động Nginx**
-
-` # yum -y install epel-release `
-` # yum -y install nginx `
-` # systemctl enable nginx `
-` # systemctl start nginx `
-
+```
+# yum -y install epel-release 
+# yum -y install nginx 
+# systemctl enable nginx 
+# systemctl start nginx 
+```
 **Cấu hình Nginx làm proxy của Apache**
 
 ` # vi etc/nginx/nginx.conf `
@@ -328,11 +327,11 @@ Cài đặt Mod SSL
 ` # yum -y install mod_ssl `
 
 Tạo thư mục để lưu private key và phân quyền
+```
+# mkdir /etc/ssl/private 
 
-` # mkdir /etc/ssl/private `
-
-` # chmod 700 /etc/ssl/private `
-
+# chmod 700 /etc/ssl/private 
+```
 Tạo chứng chỉ SSL
 
 ` # openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt `
