@@ -9,8 +9,8 @@ Yêu cầu:
 
 Project này sử dụng CentOS 7
 
-###Yêu cầu 1 + 2 : Web chạy bằng apache, cấu hình 2 virtual site
-####Bước 1: Cài đặt LAMP
+### Yêu cầu 1 + 2 : Web chạy bằng apache, cấu hình 2 virtual site
+#### Bước 1: Cài đặt LAMP
 - **Cài đặt Apache Web Server**
 
  Cài đặt Apache 
@@ -61,7 +61,7 @@ Kiểm tra phiên bản PHP vừa cài đặt
 
 `# php -v`
 
-####Bước 2: Cấu hình 2 Virtual Host 
+#### Bước 2: Cấu hình 2 Virtual Host 
 
 Trên server sẽ cấu hình chạy 2 website là web1.com và web2.com
 
@@ -137,7 +137,7 @@ Disable SELINUX bằng cách đổi trạng thái SELINUX=disabled trong /etc/se
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/a63gguvf2m_Screenshot%202021-10-05%20175012.png)
 
 
-####Bước 3: Cài đặt Wordpress
+#### Bước 3: Cài đặt Wordpress
 
 Ta sẽ cài đặt wordpress cho 2 trang web là web1.com và web2.com
 
@@ -183,16 +183,16 @@ define('DB_PASSWORD', 'password');
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/wpxjy8v4ir_Screenshot%202021-10-05%20232308.png)
 
-###Yêu cầu 3 : Set Basic-Authen để 2 user vào được site
+### Yêu cầu 3 : Set Basic-Authen để 2 user vào được site
 
-####Bước 1: Tạo user truy nhập httpd bằng lệnh htpasswd 
+#### Bước 1: Tạo user truy nhập httpd bằng lệnh htpasswd 
 
 ```
 htpasswd -c /etc/httpd/conf/pwfile admin
 New password :
 Re-type new password :
 ```
-####Bước 2: Tạo file cấu hình auth_basic.conf
+#### Bước 2: Tạo file cấu hình auth_basic.conf
 ```
 vi /etc/httpd/conf.d/auth_basic.conf
 ```
@@ -213,7 +213,7 @@ AuthUserFile /etc/httpd/conf/pwfile
 Require valid-user
 </Directory>
 ```
-####Bước 3:  Khởi động lại dịch vụ httpd 
+#### Bước 3:  Khởi động lại dịch vụ httpd 
 
 ` # systemctl restart httpd `
 
@@ -223,9 +223,9 @@ Require valid-user
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/fyas1bcjep_Screenshot%202021-10-05%20234301.png)
 
-###Yêu cầu 4: Quản lý database bằng phpmyadmin và mysql CLI
+### Yêu cầu 4: Quản lý database bằng phpmyadmin và mysql CLI
 
-####Quản lý bằng phpmyadmin
+#### Quản lý bằng phpmyadmin
 
 Cài đặt phpmyadmin 
 
@@ -249,7 +249,7 @@ Truy nhập phpmyadmin trên trình duyệt để kiểm tra kết quả
 
 Tại đây ta có thể thao tác với các database
 
-####Quản lý bằng mysql CLI
+#### Quản lý bằng mysql CLI
 
 Đăng nhập vào mysql
 
@@ -259,7 +259,7 @@ Tại đây ta có thể thao tác với các database
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/11dzb0okiz_Screenshot%202021-10-06%20000007.png)
 
-###Yêu cầu 5: Cấu hình dùng Nginx làm proxy của Apache (chạy chung trên 1 server)
+### Yêu cầu 5: Cấu hình dùng Nginx làm proxy của Apache (chạy chung trên 1 server)
 
 Ta sẽ cài đặt Nginx Reverse proxy và Apache Web Server trên cùng một server CentOS 7 có IP 192.168.1.67, Apache listen ở port 8080, Nginx listen ở port 80 
 Disable SELINUX bằng cách đổi trạng thái SELINUX=disabled trong /etc/selinux/config
