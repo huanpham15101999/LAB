@@ -325,7 +325,7 @@ Tạo thư mục để lưu private key và phân quyền
 
 ` # mkdir /etc/ssl/private `
 
-` # chmod 700 /etc/ssl/private
+` # chmod 700 /etc/ssl/private `
 
 Tạo chứng chỉ SSL
 
