@@ -39,6 +39,7 @@ Cài đặt MariaDB
 Khởi động MariaDB
 
 `# systemctl enable mariadb`
+
 `# systemctl start mariadb`
 
 Set password cho user root để đăng nhập
