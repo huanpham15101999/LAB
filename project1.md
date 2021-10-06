@@ -20,14 +20,16 @@ Project này sử dụng CentOS 7
  Khởi động Apache
 
 `# systemctl enable httpd`
+
 `# systemctl start httpd`
 
 Cấu hình firewall mở port cho dịch vụ http/https
 
-`# firewall-cmd --permanent --zone=public --add-service=http`
-`# firewall-cmd --permanent --zone=public --add-service=https`
-`# firewall-cmd --reload`
-   
+```
+# firewall-cmd --permanent --zone=public --add-service=http
+# firewall-cmd --permanent --zone=public --add-service=https
+# firewall-cmd --reload
+```   
 Truy cập địa chỉ ip của server (http://ip-server) để kiểm tra
 
 - **Cài đặt MariaDB Database**
