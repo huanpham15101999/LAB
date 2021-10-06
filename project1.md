@@ -313,7 +313,7 @@ Truy cập địa chỉ của Nginx trên trình duyệt ta sẽ được chuy�
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/rqz1gn4t66_Screenshot%202021-10-06%20122854.png)
 
-###Yêu cầu 6: Config SSL HTTPS
+### Yêu cầu 6: Config SSL HTTPS
 
 Ở đây giả sử ta muốn cài đặt cho web1.com
 
