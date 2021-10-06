@@ -262,6 +262,7 @@ Tại đây ta có thể thao tác với các database
 ### Yêu cầu 5: Cấu hình dùng Nginx làm proxy của Apache (chạy chung trên 1 server)
 
 Ta sẽ cài đặt Nginx Reverse proxy và Apache Web Server trên cùng một server CentOS 7 có IP 192.168.1.67, Apache listen ở port 8080, Nginx listen ở port 80 
+
 Disable SELINUX bằng cách đổi trạng thái SELINUX=disabled trong /etc/selinux/config
 
 **Cài đặt và khởi động Apache Web Server**
