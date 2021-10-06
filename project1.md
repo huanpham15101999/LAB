@@ -333,9 +333,9 @@ Tạo thư mục để lưu private key và phân quyền
 # chmod 700 /etc/ssl/private 
 ```
 Tạo chứng chỉ SSL
-
-` # openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt `
-
+```
+# openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
 Tạo virtual host tương tự như web1.com, tuy nhiên sử dụng port 443 (https)
 
 ` # vi /etc/httpd/sites-available/web1ssl.conf `
