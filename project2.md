@@ -2,7 +2,7 @@
 
 Yêu cầu:
 
-* Cài đặt NFS server và cấu hình export thư mục /DATA trên server sao cho chỉ 2 IP Client kết nối tới.
+* Cài đặt NFS server và cấu hình export thư mục /DATA trên server sao cho chỉ 2 IP Client kết nối tới
 
 * Sau đó để Client-1 ghi dữ liệu và kiểm tra dữ liệu đã đồng bộ trên Client-2 chưa, và ngược lại
 
