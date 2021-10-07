@@ -77,9 +77,9 @@ Sử dụng lệnh sau để mount
 
 Trong đó:
 
-10.10.10.11:/DATA là ip và đường dẫn đến thư mục tài nguyên chia sẻ trên NFS Server
+` 192.168.1.184:/DATA ` là IP và đường dẫn đến thư mục tài nguyên chia sẻ trên NFS Server
 
-/DATA1 là đường dẫn của thư mục trên client hay còn gọi là mount point
+` /DATA1 ` là đường dẫn của thư mục trên client hay còn gọi là mount point
 
 Kiểm tra xem mount point đã hoạt động hay chưa ta sử dụng lệnh ` # df -h `
 
