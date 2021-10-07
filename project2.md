@@ -10,7 +10,7 @@ Yêu cầu:
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/xg5bstojgj_Untitled-1.jpg)
 
-
+>
 Mô hình gồm có 1 NFS Server và 2 Client
 
 Cả Server và Client đều sử dụng hệ điều hành CentOS 7
