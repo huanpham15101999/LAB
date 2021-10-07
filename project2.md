@@ -10,17 +10,16 @@ Yêu cầu:
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/xg5bstojgj_Untitled-1.jpg)
 
-```
-Mô hình gồm có 1 NFS Server và 2 Client
+- Mô hình gồm có 1 NFS Server và 2 Client
 
-Cả Server và Client đều sử dụng hệ điều hành CentOS 7
+- Cả Server và Client đều sử dụng hệ điều hành CentOS 7
 
-NFS Server: 192.168.1.184
+- NFS Server: 192.168.1.184
 
-Client 1: 192.168.1.233
+- Client 1: 192.168.1.233
 
-Client 2: 192.168.1.177
-```
+- Client 2: 192.168.1.177
+
 ### Cài đặt và cấu hình NFS Server ###
 
 Cài đặt cài package *nfs-utils*
