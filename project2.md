@@ -22,7 +22,7 @@ Yêu cầu:
 
 ### Cài đặt và cấu hình NFS Server ###
 
-Cài đặt cài package *nfs-utils*
+Cài đặt cài package nfs-utils
 
 ` # yum install nfs-utils -y `
 
