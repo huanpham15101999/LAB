@@ -14,9 +14,9 @@ Yêu cầu:
 Mô hình gồm có 1 NFS Server và 2 Client
 Cả Server và Client đều sử dụng hệ điều hành CentOS 7
 Địa chỉ IP
-* NFS Server: 192.168.1.184
-* Client 1: 192.168.1.233
-* Client 2: 192.168.1.177
+*NFS Server: 192.168.1.184
+*Client 1: 192.168.1.233
+*Client 2: 192.168.1.177
 ```
 ### Cài đặt và cấu hình NFS Server ###
 
