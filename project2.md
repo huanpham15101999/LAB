@@ -59,6 +59,8 @@ Cấu hình firewall cho phép dịch vụ nfs
 # firewall-cmd --permanent --add-service=rpc-bind
 # firewall-cmd --reload
 ```
+Kiểm tra mount point trên server bằng câu lệnh ` # showmount -e localhost `
+
 ### Cài đặt và cấu hình NFS Client ###
 
 **Trên Client 1:**
