@@ -93,7 +93,7 @@ Thực hiện tương tự như Client 1
 
 ![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/timzfhcki3_Screenshot%202021-10-07%20143010.png)
 
-###Kiểm tra kết quả###
+### Kiểm tra kết quả ###
 
 Trên Client 1, ta truy cập /DATA1 và tạo file mới là huanpham.txt
 
