@@ -8,7 +8,7 @@ Yêu cầu:
 
 ### Mô hình LAB ###
 
-![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/si01kxcbia_Untitled-1.jpg)
+![alt text](https://s3-ap-southeast-1.amazonaws.com/kipalog.com/il4q623n36_Untitled%20Diagram.drawio.png)
 
 - Mô hình gồm có 1 NFS Server và 2 Client
 
