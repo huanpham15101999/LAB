@@ -89,9 +89,7 @@ Tạo 2 thư mục lưu trữ File cấu hình Virtual host cho Apache:
 # mkdir /etc/httpd/sites-enabled 
 ```
 Trong đó:
-
 * sites-available chứa các cấu hình Virtual host có trên hệ thống
-
 * sites-enabled chứa các cấu hình Virtual host được kích hoạt để chạy
 
 Cấu hình để Apache nhận cấu hình những virtual host trong sites-enabled
