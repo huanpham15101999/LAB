@@ -1,10 +1,10 @@
-# Project 1: Dựng Web Server chạy WordPress trên server linux (tự chọn Ubuntu hoặc CentOS)
+# Project 1: Dựng Web Server chạy WordPress trên server Linux (tự chọn Ubuntu hoặc CentOS)
 Yêu cầu:
-* Web chạy bằng nginx hoặc Apache
+* Web chạy bằng Nginx hoặc Apache
 * Cấu hình ít nhất 2 virtual site
 * Set Basic-Authen để 2 user vào được site
 * Quản lý database bằng phpmyadmin và mysql CLI
-* Cấu hình dùng nginx làm proxy của Apache (chạy chung trên 1 server)
+* Cấu hình dùng Nginx làm proxy của Apache (chạy chung trên 1 server)
 * Config SSL HTTPS
 
 Project này sử dụng CentOS 7
